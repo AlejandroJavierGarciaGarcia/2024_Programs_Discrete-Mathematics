@@ -1,13 +1,14 @@
+"""
+* Universidad del Valle de Guatemala
+* Matemática Discreta
+* Ingeniero Mario Castillo
+* Programa: Algoritmo de la criba de Eratóstenes
+* Integrantes: 
+*  - Diego López
+*  - Alejandro García
+*  - Rocardo Godínez 
+"""
 import time
-
-def prime_test1(n):
-    # Recorre desde dos hasta el número aumentado en 1
-    for i in range(2,n):
-        # Si el número es divisible dentro de i, entonces, es primo
-        if n % i ==0:
-            return False
-        # Si no es divisible dentro de nigún i, entonces, es compuesto
-    return True
 
 def Criba(n):
     # Lista de primos
@@ -15,12 +16,13 @@ def Criba(n):
     # LIstas de no primos
     not_primes = set()
     # Recorre desde dos hasta el número aumentado en uno
-    for i in range(2,n):
+    for i in range(2,n+1):
+
         # Verifica si i está en no primos, si ya está salta el índice
         if i in not_primes:
             continue
-        # Verifica los múltiplos de i y los agrega en j hasta n
-        for j in range(i*2,n,i):
+        # Verifica los múltiplos de i y los agrega en la lista de no primos de j hasta n
+        for j in range(i*2,n+1,i):
             not_primes.add(j)
         # Después de las validaciones añade a i al array de primos
         primes.append(i)
@@ -33,18 +35,16 @@ def prime_test2(n):
     for i in prime_list:
         # Si el número es divisible dentro de algún primo, entonces, es compuesto
         if n % i==0:
-            return False
-    return True
-    
+            return prime_list
+    return prime_list
+
+# Punto de inico del programa
 print(" ------------------------------------------------")
-print(" |            DIVISIBILIDAD - 231136            |")
+print(" |            CRIBA DE ERATÓSTENES             |")
 print(" ------------------------------------------------")
 
-a = int(input("\n - Introduce un número: "))
+num = int(input(" - Introduce un número: "))
 start_time = time.time()
-
-print(prime_test2(a))
-
+print(" - Los primos menores o iguales a 28 son:", Criba(int(num)))
 end_time = time.time()
-
-print("Execution time: ", end_time-start_time)
+print("\n  - Execution time: ", end_time-start_time)
