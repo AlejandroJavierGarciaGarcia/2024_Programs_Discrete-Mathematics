@@ -8,7 +8,21 @@
 *  - Alejandro García
 *  - Rocardo Godínez 
 """
-import time
+
+# Función que lee un entero positivo y valida que sea mayor que 0
+def validacion(num):
+    while True:
+        if num.isdigit():  
+            num = int(num)
+            if num >=2:
+                return num
+            else:
+                print(" * Ingrese un entero positivo.")
+        else:
+            print(" * Entrada inválida. Debe ingresar un número entero mayor o igual a 2.")
+        
+        num = input("\n - Ingrese nuevamente un número: ")
+
 
 def Criba(n):
     # Lista de primos
@@ -42,9 +56,5 @@ def prime_test2(n):
 print(" ------------------------------------------------")
 print(" |            CRIBA DE ERATÓSTENES             |")
 print(" ------------------------------------------------")
-
-num = int(input(" - Introduce un número: "))
-start_time = time.time()
+num = validacion(input(" - Introduzca un número: "))
 print(" - Los primos menores o iguales a 28 son:", Criba(int(num)))
-end_time = time.time()
-print("\n  - Execution time: ", end_time-start_time)
