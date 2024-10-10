@@ -2,7 +2,7 @@
 * Universidad del Valle de Guatemala
 * Matemática Discreta
 * Ingeniero Mario Castillo
-* Programa: Algoritmo de la criba de Eratóstenes
+* Programa: Algoritmo de Bezoutpip
 * Integrantes: 
 *  - Diego López
 *  - Alejandro García

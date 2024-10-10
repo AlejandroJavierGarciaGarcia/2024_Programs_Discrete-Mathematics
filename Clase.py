@@ -1,13 +1,19 @@
 import time
 
-def prime_test1(n):
-    # Recorre desde dos hasta el número aumentado en 1
-    for i in range(2,n):
-        # Si el número es divisible dentro de i, entonces, es primo
-        if n % i ==0:
-            return False
-        # Si no es divisible dentro de nigún i, entonces, es compuesto
-    return True
+# Función que lee un entero positivo y valida que sea mayor que 0
+def validacion(num):
+    while True:
+        if num.isdigit():  
+            num = int(num)
+            if num >=2:
+                return num
+            else:
+                print(" * Ingrese un entero positivo.")
+        else:
+            print(" * Entrada inválida. Debe ingresar un número entero mayor o igual a 2.")
+        
+        num = input("\n - Ingrese nuevamente un número: ")
+
 
 def Criba(n):
     # Lista de primos
@@ -37,14 +43,11 @@ def prime_test2(n):
     return True
     
 print(" ------------------------------------------------")
-print(" |            DIVISIBILIDAD - 231136            |")
+print(" |              TEST DE PRIMALIDAD              |")
 print(" ------------------------------------------------")
 
 a = int(input("\n - Introduce un número: "))
-start_time = time.time()
 
 print(prime_test2(a))
 
-end_time = time.time()
 
-print("Execution time: ", end_time-start_time)

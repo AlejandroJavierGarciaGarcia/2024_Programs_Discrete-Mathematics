@@ -1,25 +1,16 @@
-"""
-* Universidad del Valle de Guatemala
-* Matemática Discreta
-* Ingeniero Mario Castillo
-* Programa: Algoritmo de la criba de Eratóstenes
-* Integrantes: 
-*  - Diego López
-*  - Alejandro García
-*  - Rocardo Godínez 
-"""
+import time
 
 # Función que lee un entero positivo y valida que sea mayor que 0
 def validacion(num):
     while True:
         if num.isdigit():  
             num = int(num)
-            if num >=2:
+            if num >0:
                 return num
             else:
                 print(" * Ingrese un entero positivo.")
         else:
-            print(" * Entrada inválida. Debe ingresar un número entero mayor o igual a 2.")
+            print(" * Entrada inválida. Debe ingresar un número entero mayor a 0.")
         
         num = input("\n - Ingrese nuevamente un número: ")
 
@@ -31,7 +22,6 @@ def Criba(n):
     not_primes = set()
     # Recorre desde dos hasta el número aumentado en uno
     for i in range(2,n+1):
-
         # Verifica si i está en no primos, si ya está salta el índice
         if i in not_primes:
             continue
@@ -40,11 +30,25 @@ def Criba(n):
             not_primes.add(j)
         # Después de las validaciones añade a i al array de primos
         primes.append(i)
+    print(primes)
     return primes
 
-# Punto de inico del programa
+def prime_test2(n):
+    # Llama a funcion Criba y guarda los número primos en otro arreglo
+    prime_list = Criba(int(n**0.5))
+    print(prime_list)
+    # Verifica divisibilidad del n según la lista de primos
+    for i in prime_list:
+        # Si el número es divisible dentro de algún primo, entonces, es compuesto
+        if n % i==0:
+            return False
+    return True
+
+
 print(" ------------------------------------------------")
-print(" |            CRIBA DE ERATÓSTENES             |")
+print(" |              TEST DE PRIMALIDAD              |")
 print(" ------------------------------------------------")
-num = validacion(input(" - Introduzca un número: "))
-print(" - Los primos menores o iguales a 28 son:", Criba(int(num)))
+num = validacion(input("\n - Introduce un número: "))
+print(prime_test2(num))
+
+

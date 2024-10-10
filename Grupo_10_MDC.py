@@ -1,3 +1,14 @@
+"""
+* Universidad del Valle de Guatemala
+* Matemática Discreta
+* Ingeniero Mario Castillo
+* Programa: MCD
+* Integrantes: 
+*  - Diego López
+*  - Alejandro García
+*  - Rocardo Godínez 
+"""
+
 def mcd(a, b):
     r = a % b
     while r!=0:
