@@ -1,5 +1,13 @@
-import time
-
+"""
+* Universidad del Valle de Guatemala
+* Matemática Discreta - 10 
+* Ingeniero Mario Castillo
+* Programa: Test de primalidad
+* Integrantes: 
+*  - Diego López
+*  - Alejandro García
+*  - Ricardo Godínez 
+"""
 # Función que lee un entero positivo y valida que sea mayor que 0
 def validacion(num):
     while True:

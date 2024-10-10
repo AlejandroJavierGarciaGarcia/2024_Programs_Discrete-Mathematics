@@ -1,12 +1,12 @@
 """
 * Universidad del Valle de Guatemala
-* Matemática Discreta
+* Matemática Discreta - 10 
 * Ingeniero Mario Castillo
 * Programa: MCD
 * Integrantes: 
 *  - Diego López
 *  - Alejandro García
-*  - Rocardo Godínez 
+*  - Ricardo Godínez 
 """
 
 def mcd(a, b):

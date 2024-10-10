@@ -1,12 +1,12 @@
 """
 * Universidad del Valle de Guatemala
-* Matemática Discreta
+* Matemática Discreta - 10 
 * Ingeniero Mario Castillo
 * Programa: Algoritmo de la criba de Eratóstenes
 * Integrantes: 
 *  - Diego López
 *  - Alejandro García
-*  - Rocardo Godínez 
+*  - Ricardo Godínez 
 """
 
 # Función que lee un entero positivo y valida que sea mayor que 0

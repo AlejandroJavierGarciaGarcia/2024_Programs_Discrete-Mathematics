@@ -1,6 +1,6 @@
 """
 * Universidad del Valle de Guatemala
-* Matemática Discreta
+* Matemática Discreta - 10 
 * Ingeniero Mario Castillo
 * Programa: Algoritmo de Bezoutpip
 * Integrantes: 
