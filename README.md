@@ -8,3 +8,6 @@ Programas relacionados a propiedades de divisibilidad
 
 ## MCD
 ![image](https://github.com/user-attachments/assets/7a5c766a-24fc-4dfe-aba0-f70aabb534e6)
+
+## Algoritmo de Bezout 
+![image](https://github.com/user-attachments/assets/8d1d5609-69df-4bbd-90cb-5203586f3627)
