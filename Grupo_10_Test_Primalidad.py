@@ -32,7 +32,7 @@ def Criba(n):
         primes.append(i)
     return primes
 
-def prime_test2(n):
+def prime_test(n):
     # Llama a funcion Criba y guarda los número primos en otro arreglo
     prime_list = Criba(int(n**0.5))
     # Verifica divisibilidad del n según la lista de primos
@@ -44,11 +44,23 @@ def prime_test2(n):
     print("El número ", n, " es primo")
     return True
 
+def dividers(n):
+    dividers = []
+    prime_list = Criba(int(n))
+    # Verifica divisibilidad del n según la lista de primos4
+    for i in prime_list:
+        # Si el número es divisible dentro de algún primo, entonces, es compuesto
+        if n % i==0:
+            dividers.append(i)
+    print("  - Factorización prima:", ' x '.join(map(str, dividers)))
+
 
 print(" ------------------------------------------------")
 print(" |              TEST DE PRIMALIDAD              |")
 print(" ------------------------------------------------")
 num = validacion(input(" - Introduce un número: "))
-prime_test2(num)
+prime_test(num)
+dividers(num)
+
 
 
