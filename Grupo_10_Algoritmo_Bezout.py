@@ -33,8 +33,8 @@ def bezout(a,b):
 
     while b!= 0:
         c = a//b
-        T = np.array([[0, 1],
-              [1, -c]])
+        T = np.array([[-c, 1],
+              [1, 0]])
 
         M = np.dot(M,T)
 
@@ -44,8 +44,8 @@ def bezout(a,b):
         a = b0
         b = a0 % b0
 
-    x = M[0,0]
-    y = M[1,0]
+    y = M[0,1]
+    x = M[1,1]
     
     return x,y
 
