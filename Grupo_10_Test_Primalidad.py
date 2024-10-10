@@ -48,6 +48,7 @@ def prime_test(n):
         # Si el número es divisible dentro de algún primo, entonces, es compuesto
         if n % i==0:
             print("El número ", n, " no es primo, pues lo divide ", i)
+            dividers(num)
             return False
     print("El número ", n, " es primo")
     return True
@@ -58,8 +59,10 @@ def dividers(n):
     # Verifica divisibilidad del n según la lista de primos4
     for i in prime_list:
         # Si el número es divisible dentro de algún primo, entonces, es compuesto
-        if n % i==0:
+        while n % i==0:
             dividers.append(i)
+            n //= i
+
     print("  - Factorización prima:", ' x '.join(map(str, dividers)))
 
 
@@ -68,7 +71,6 @@ print(" |              TEST DE PRIMALIDAD              |")
 print(" ------------------------------------------------")
 num = validacion(input(" - Introduce un número: "))
 prime_test(num)
-dividers(num)
 
 
 

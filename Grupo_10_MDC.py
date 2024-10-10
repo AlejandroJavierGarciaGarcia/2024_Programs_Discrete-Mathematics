@@ -16,8 +16,9 @@ def mcd(a, b):
         b = r
         r = a % b 
     return b
-
-
+print(" ------------------------------------------------")
+print(" |                    MCD                       |")
+print(" ------------------------------------------------")
 a = int(input("Ingrese un entero positivo a: "))
 b = int(input("Ingrese un entero positivo b: "))
 print("El mdc de", a, "y", b, "es", mcd(a, b))
